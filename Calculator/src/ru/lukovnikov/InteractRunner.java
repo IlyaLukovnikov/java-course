@@ -16,10 +16,10 @@ public class InteractRunner {
     }
 
     private String exit = "no"; // Выход
-    private  ArrayList<Double> arguments;
-    private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    private String operation;
+    private  ArrayList<Double> arguments; // аргументы
+    private String operation; // выполняемая операция
     private Calculator calculator = new Calculator();
+    private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     /**
      *  Запуск

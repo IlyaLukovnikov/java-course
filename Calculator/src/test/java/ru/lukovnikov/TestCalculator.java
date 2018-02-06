@@ -1,6 +1,5 @@
-package test.java.ru.lukovnikov;
+package ru.lukovnikov;
 
-import main.java.ru.lukovnikov.Calculator;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;

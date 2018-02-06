@@ -29,35 +29,35 @@ public class InteractRunner {
             chooseOperation();
             enterParams();
             switch (operation) {
-                case "add": {
+                case "+": {
                     calculator.add(arguments);
                     printResult();
                     cleanResult();
                     setExit();
                     break;
                 }
-                case "sub": {
+                case "-": {
                     calculator.sub(arguments);
                     printResult();
                     cleanResult();
                     setExit();
                     break;
                 }
-                case "mul": {
+                case "*": {
                     calculator.mul(arguments);
                     printResult();
                     cleanResult();
                     setExit();
                     break;
                 }
-                case "div": {
+                case "/": {
                     calculator.div(arguments);
                     printResult();
                     cleanResult();
                     setExit();
                     break;
                 }
-                case "pow": {
+                case "^": {
                     calculator.pow(arguments);
                     printResult();
                     cleanResult();
@@ -72,11 +72,11 @@ public class InteractRunner {
      * Выбор операции
       */
     private void chooseOperation() throws IOException {
-        System.out.println("Choose your operation: add/ sub/ mul/ div/ pow");
+        System.out.println("Choose your operation: +, -, *, /, ^");
         operation = reader.readLine();
-        while (!operation.equals("add")&& !operation.equals("sub") && !operation.equals("mul") &&
-                !operation.equals("div") && !operation.equals("pow")) {
-            System.out.println("You should write: add/ sub/ mul/ div/ pow");
+        while (!operation.equals("+")&& !operation.equals("-") && !operation.equals("*") &&
+                !operation.equals("/") && !operation.equals("^")) {
+            System.out.println("You should write: +, -, *, /, ^");
             operation = reader.readLine();
         }
     }
@@ -130,6 +130,10 @@ public class InteractRunner {
         System.out.println("Result: " + calculator.getResult());
     }
 
+    /**
+     * Выход
+     * @throws IOException
+     */
     private void setExit() throws IOException {
         System.out.println("Exit? : y / n");
         String setExit = reader.readLine();

@@ -1,4 +1,4 @@
-package ru.lukovnikov;
+package main.java.ru.lukovnikov;
 
 import java.io.BufferedReader;
 import java.io.IOException;

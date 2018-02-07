@@ -31,12 +31,7 @@ public class Calculator {
             for (int i = 1; i < params.size(); i++) {
                 sub -= params.get(i);
             }
-            if (this.result == 0) {
-                this.result = sub;
-            }
-            else {
-                this.result -= sub;
-            }
+           this.result = (this.result == 0 ? sub : this.result - sub);
         }
         catch(IndexOutOfBoundsException e) {
             System.out.println("Arguments not entered");
@@ -53,12 +48,7 @@ public class Calculator {
             for (int i = 1; i < params.size(); i++) {
                 mul *= params.get(i);
             }
-            if (this.result == 0) {
-                this.result = mul;
-            }
-            else {
-                this.result *= mul;
-            }
+            this.result = (this.result == 0 ? mul : this.result * mul);
         }
         catch (IndexOutOfBoundsException e) {
             System.out.println("Arguments not entered");
@@ -79,12 +69,7 @@ public class Calculator {
                 }
                 div /= params.get(i);
             }
-            if (this.result == 0) {
-                this.result = div;
-            }
-            else {
-                this.result /= div;
-            }
+            this.result = (this.result == 0 ? div : this.result / div);
         }
         catch (IndexOutOfBoundsException e) {
             System.out.println("Arguments not entered");
